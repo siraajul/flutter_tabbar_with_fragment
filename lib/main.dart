@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/alarmfragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/contactfragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/emailfragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/homefragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/locationfragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/personfragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/searchfragment.dart';
+import 'package:flutter_tabbar_with_fragment/fragment/settingsfragment.dart';
 
 void main() {
   runApp( MyApp());
@@ -41,14 +49,15 @@ class HomeActivity extends StatelessWidget{
           ),
           body: TabBarView(
             children: [
-              Text("1"),
-              Text("2"),
-              Text("3"),
-              Text("4"),
-              Text("5"),
-              Text("6"),
-              Text("7"),
-              Text("8"),
+              homefragment(),
+              searchfragment(),
+              settingsfragment(),
+              emailfragment(),
+              contactfragment(),
+              personfragment(),
+              alarmfragment(),
+              locationfragment(),
+
             ],
           ),
         )
